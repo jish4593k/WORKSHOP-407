@@ -8,7 +8,6 @@ from tkinter import messagebox
 from Classes import *
 
 
-# PyTorch Neural Network
 class SimpleNN(nn.Module):
     def __init__(self, input_size, output_size):
         super(SimpleNN, self).__init__()
@@ -33,7 +32,6 @@ def predict(input_data):
         return model(input_data)
 
 
-# Initialize PyTorch model
 input_size = 2  # Adjust input size based on your data
 output_size = 1  # Adjust output size based on your data
 model = SimpleNN(input_size, output_size)
@@ -41,7 +39,7 @@ criterion = nn.MSELoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
 
-# GUI Initialization
+
 root = tk.Tk()
 root.title("Space Invaders")
 root.geometry("500x500")
@@ -56,10 +54,7 @@ def on_closing():
 
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
-# Other code remains mostly the same
-# ...
 
-# Main game loop
 while run:
     clock.tick(30)
 
